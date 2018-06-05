@@ -6,10 +6,10 @@ eureka:
     hostname: localhost
   server:
     evictionIntervalTimerInMs: 5000 # 续期时间，即扫描失效服务的间隔时间（缺省为60*1000ms）
-    enableSelfPreservation: false # 关闭自我保护模式（缺省为打开）
+    enableSelfPreservation: true # 关闭自我保护模式（缺省为打开）
   client:
     healthcheck:
-      enabled: true  # 开启健康检查（依赖spring-boot-starter-actuator）
+      enabled: false  # 开启健康检查（依赖spring-boot-starter-actuator）
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
