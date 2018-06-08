@@ -8,7 +8,7 @@ public class DecryptDruidDataSource extends DruidDataSource {
 
 	public void setUsername(String username) {
 		try {
-			username = ConfigTools.decrypt(username);
+			//username = ConfigTools.decrypt(username);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -17,7 +17,7 @@ public class DecryptDruidDataSource extends DruidDataSource {
 
 	public void setPassword(String password) {
 		try {
-			password = ConfigTools.decrypt(password);
+			//password = ConfigTools.decrypt(password);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

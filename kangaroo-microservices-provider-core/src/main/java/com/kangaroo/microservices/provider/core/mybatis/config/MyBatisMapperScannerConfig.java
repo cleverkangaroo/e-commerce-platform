@@ -23,7 +23,7 @@ public class MyBatisMapperScannerConfig {
 		mapperScannerConfigurer.setBasePackage("com.kangaroo.microservices.provider.*.dao.master");
 		Properties properties = new Properties();
 		properties.setProperty("mappers",
-				"tk.mybatis.mapper.common.Mapper,tk.mybatis.mapper.common.MySqlMapper,tk.mybatis.mapper.common.IdsMapper,com.uama.microservices.provider.core.mybatis.mapper.CustomMapper");
+				"tk.mybatis.mapper.common.Mapper,tk.mybatis.mapper.common.MySqlMapper,tk.mybatis.mapper.common.IdsMapper,com.kangaroo.microservices.provider.core.mybatis.mapper.CustomMapper");
 		properties.setProperty("notEmpty", "false");
 		properties.setProperty("IDENTITY", "select uuid()");
 		properties.setProperty("ORDER", "BEFORE");

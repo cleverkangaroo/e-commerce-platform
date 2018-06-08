@@ -66,17 +66,17 @@ public class MyBatisConfiguration implements TransactionManagementConfigurer {
 	}
 
 	@Bean(name = TransactionConstant.MASTER)
-	public DataSourceTransactionManager masterDSTM() {
-		DataSourceTransactionManager dstm = new DataSourceTransactionManager(masterDataSource);
-		dstm.setNestedTransactionAllowed(true);
-		return dstm;
+	public DataSourceTransactionManager masterDataSourceTransactionManager() {
+		DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager(masterDataSource);
+		dataSourceTransactionManager.setNestedTransactionAllowed(true);
+		return dataSourceTransactionManager;
 	}
 
 	@Bean(name = "businessSqlSessionFactory")
 	public SqlSessionFactory businessSqlSessionFactory() throws Exception {
 		SqlSessionFactoryBean sfb = new SqlSessionFactoryBean();
 		sfb.setDataSource(businessDataSource);
-		sfb.setTypeAliasesPackage("com.uama.microservices.provider.*.model");
+		sfb.setTypeAliasesPackage("com.kangaroo.microservices.provider.*.model");
 		org.apache.ibatis.session.Configuration config = new org.apache.ibatis.session.Configuration();
 		config.setLogImpl(Slf4jImpl.class);
 		sfb.setConfiguration(config);
@@ -105,17 +105,17 @@ public class MyBatisConfiguration implements TransactionManagementConfigurer {
 	}
 
 	@Bean(name = TransactionConstant.BUSINESS)
-	public DataSourceTransactionManager businessDSTM() {
-		DataSourceTransactionManager dstm = new DataSourceTransactionManager(businessDataSource);
-		dstm.setNestedTransactionAllowed(true);
-		return dstm;
+	public DataSourceTransactionManager businessDataSourceTransactionManager() {
+		DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager(businessDataSource);
+		dataSourceTransactionManager.setNestedTransactionAllowed(true);
+		return dataSourceTransactionManager;
 	}
 
 	@Primary
 	@Bean
 	@Override
 	public PlatformTransactionManager annotationDrivenTransactionManager() {
-		return businessDSTM();
+		return businessDataSourceTransactionManager();
 	}
 
 }
