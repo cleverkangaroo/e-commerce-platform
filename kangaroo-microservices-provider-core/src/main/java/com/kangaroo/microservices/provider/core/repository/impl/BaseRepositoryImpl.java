@@ -2,11 +2,11 @@ package com.kangaroo.microservices.provider.core.repository.impl;
 
 import java.util.List;
 
-import com.kangaroo.microservices.provider.core.repository.IBaseRepository;
+import com.kangaroo.microservices.provider.core.repository.BaseRepository;
 
 import tk.mybatis.mapper.common.Mapper;
 
-public abstract class BaseRepository<T> implements IBaseRepository<T> {
+public abstract class BaseRepositoryImpl<T> implements BaseRepository<T> {
 
 	protected abstract Mapper<T> getBaseMapper();
 
@@ -47,6 +47,13 @@ public abstract class BaseRepository<T> implements IBaseRepository<T> {
 	public List<T> select(T record) {
 		return getBaseMapper().select(record);
 	}
+
+	@Override
+	public int delete(T record) {
+		return getBaseMapper().delete(record);
+	}
+
+
 
 
 }

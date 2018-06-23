@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kangaroo.microservices.provider.base.dao.master.UsersMapper">
+  <resultMap id="BaseResultMap" type="com.kangaroo.microservices.provider.base.model.entity.Users">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="dtype" jdbcType="VARCHAR" property="dtype" />
+    <result column="createdDate" jdbcType="TIMESTAMP" property="createddate" />
+    <result column="lastModifiedDate" jdbcType="TIMESTAMP" property="lastmodifieddate" />
+    <result column="version" jdbcType="SMALLINT" property="version" />
+    <result column="isEnabled" jdbcType="BIT" property="isenabled" />
+    <result column="isLocked" jdbcType="BIT" property="islocked" />
+    <result column="lastLoginDate" jdbcType="TIMESTAMP" property="lastlogindate" />
+    <result column="lastLoginIp" jdbcType="VARCHAR" property="lastloginip" />
+    <result column="lockDate" jdbcType="TIMESTAMP" property="lockdate" />
+    <result column="department" jdbcType="VARCHAR" property="department" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="encodedPassword" jdbcType="VARCHAR" property="encodedpassword" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="attributeValue0" jdbcType="VARCHAR" property="attributevalue0" />
+    <result column="attributeValue1" jdbcType="VARCHAR" property="attributevalue1" />
+    <result column="attributeValue10" jdbcType="VARCHAR" property="attributevalue10" />
+    <result column="attributeValue11" jdbcType="VARCHAR" property="attributevalue11" />
+    <result column="attributeValue12" jdbcType="VARCHAR" property="attributevalue12" />
+    <result column="attributeValue13" jdbcType="VARCHAR" property="attributevalue13" />
+    <result column="attributeValue14" jdbcType="VARCHAR" property="attributevalue14" />
+    <result column="attributeValue15" jdbcType="VARCHAR" property="attributevalue15" />
+    <result column="attributeValue16" jdbcType="VARCHAR" property="attributevalue16" />
+    <result column="attributeValue17" jdbcType="VARCHAR" property="attributevalue17" />
+    <result column="attributeValue18" jdbcType="VARCHAR" property="attributevalue18" />
+    <result column="attributeValue19" jdbcType="VARCHAR" property="attributevalue19" />
+    <result column="attributeValue2" jdbcType="VARCHAR" property="attributevalue2" />
+    <result column="attributeValue3" jdbcType="VARCHAR" property="attributevalue3" />
+    <result column="attributeValue4" jdbcType="VARCHAR" property="attributevalue4" />
+    <result column="attributeValue5" jdbcType="VARCHAR" property="attributevalue5" />
+    <result column="attributeValue6" jdbcType="VARCHAR" property="attributevalue6" />
+    <result column="attributeValue7" jdbcType="VARCHAR" property="attributevalue7" />
+    <result column="attributeValue8" jdbcType="VARCHAR" property="attributevalue8" />
+    <result column="attributeValue9" jdbcType="VARCHAR" property="attributevalue9" />
+    <result column="balance" jdbcType="DECIMAL" property="balance" />
+    <result column="bankAccount" jdbcType="VARCHAR" property="bankaccount" />
+    <result column="bankName" jdbcType="VARCHAR" property="bankname" />
+    <result column="frozenAmount" jdbcType="DECIMAL" property="frozenamount" />
+    <result column="idCard" jdbcType="VARCHAR" property="idcard" />
+    <result column="idCardImage" jdbcType="VARCHAR" property="idcardimage" />
+    <result column="identificationNumber" jdbcType="VARCHAR" property="identificationnumber" />
+    <result column="legalPerson" jdbcType="VARCHAR" property="legalperson" />
+    <result column="licenseImage" jdbcType="VARCHAR" property="licenseimage" />
+    <result column="licenseNumber" jdbcType="VARCHAR" property="licensenumber" />
+    <result column="organizationCode" jdbcType="VARCHAR" property="organizationcode" />
+    <result column="organizationImage" jdbcType="VARCHAR" property="organizationimage" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="safeKeyExpire" jdbcType="TIMESTAMP" property="safekeyexpire" />
+    <result column="safeKeyValue" jdbcType="VARCHAR" property="safekeyvalue" />
+    <result column="taxImage" jdbcType="VARCHAR" property="taximage" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="amount" jdbcType="DECIMAL" property="amount" />
+    <result column="birth" jdbcType="TIMESTAMP" property="birth" />
+    <result column="gender" jdbcType="TINYINT" property="gender" />
+    <result column="point" jdbcType="SMALLINT" property="point" />
+    <result column="zipCode" jdbcType="CHAR" property="zipcode" />
+    <result column="area_id" jdbcType="BIGINT" property="areaId" />
+    <result column="memberRank_id" jdbcType="BIGINT" property="memberrankId" />
+    <result column="miniOpenId" jdbcType="VARCHAR" property="miniopenid" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="channelId" jdbcType="TINYINT" property="channelid" />
+    <result column="appName" jdbcType="VARCHAR" property="appname" />
+    <result column="legel" jdbcType="BIT" property="legel" />
+    <result column="isSubscribe" jdbcType="BIT" property="issubscribe" />
+    <result column="serviceWechat" jdbcType="VARCHAR" property="servicewechat" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, dtype, createdDate, lastModifiedDate, version, isEnabled, isLocked, lastLoginDate, 
+    lastLoginIp, lockDate, department, email, encodedPassword, mobile, name, username, 
+    attributeValue0, attributeValue1, attributeValue10, attributeValue11, attributeValue12, 
+    attributeValue13, attributeValue14, attributeValue15, attributeValue16, attributeValue17, 
+    attributeValue18, attributeValue19, attributeValue2, attributeValue3, attributeValue4, 
+    attributeValue5, attributeValue6, attributeValue7, attributeValue8, attributeValue9, 
+    balance, bankAccount, bankName, frozenAmount, idCard, idCardImage, identificationNumber, 
+    legalPerson, licenseImage, licenseNumber, organizationCode, organizationImage, phone, 
+    safeKeyExpire, safeKeyValue, taxImage, address, amount, birth, gender, point, zipCode, 
+    area_id, memberRank_id, miniOpenId, nickname, avatar, channelId, appName, legel, 
+    isSubscribe, serviceWechat
+  </sql>
+  
+  <select id="selectByUsernameAndDtype" resultMap="BaseResultMap">
+  select 
+  <include refid="Base_Column_List" />
+  from Users
+  where username=#{username} and dtype=#{dtype}
+  </select>
+</mapper>

@@ -24,6 +24,8 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import com.kangaroo.api.core.serialzer.SwaggerJsonSerializer;
+import com.kangaroo.api.management.support.ApiResult;
+import com.kangaroo.api.management.support.ApiResultSerializer;
 
 import springfox.documentation.spring.web.json.Json;
 
@@ -32,10 +34,7 @@ public class WebMvcConfiguration extends WebMvcConfigurerAdapter {
 	@Value("${cors.allowed-origins}")
 	private String origins;
 	
-	/*@Bean
-	public ByteArrayHttpMessageConverter byteArrayHttpMessageConverter() {
-		return new ByteArrayHttpMessageConverter();
-	}*/
+	
 	
 	@Override
 	public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
@@ -54,6 +53,7 @@ public class WebMvcConfiguration extends WebMvcConfigurerAdapter {
 		fastJsonHttpMessageConverter.setSupportedMediaTypes(supportedMediaTypes);
 		FastJsonConfig fastJsonConfig = new FastJsonConfig();
 		fastJsonConfig.getSerializeConfig().put(Json.class, new SwaggerJsonSerializer());
+		fastJsonConfig.getSerializeConfig().put(ApiResult.class,new ApiResultSerializer());
 		
 		
 		fastJsonConfig.setSerializerFeatures(SerializerFeature.WriteMapNullValue, SerializerFeature.PrettyFormat,

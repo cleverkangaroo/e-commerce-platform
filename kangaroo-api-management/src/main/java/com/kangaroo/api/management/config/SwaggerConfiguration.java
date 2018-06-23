@@ -28,19 +28,19 @@ public class SwaggerConfiguration {
 
 	
 	public static final String TOEKN = "token";
+	public static final String TOKEN_DESCR="用户token";
 
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
 				.apis(RequestHandlerSelectors.basePackage(CONTROLLER_PACKAGE)).paths(PathSelectors.any()).build()
 				.apiInfo(apiInfo())
-				//.globalOperationParameters(globalOperationParameters());
-				;
+				.globalOperationParameters(globalOperationParameters());
 	}
 
 	private List<Parameter> globalOperationParameters() {
 		List<Parameter> p = new ArrayList<Parameter>();
-		p.add(new ParameterBuilder().name(TOEKN)
+		p.add(new ParameterBuilder().name(TOEKN).description(TOKEN_DESCR)
 				.modelRef(new ModelRef("string")).parameterType("header").required(true)
 				.defaultValue("").build());
 

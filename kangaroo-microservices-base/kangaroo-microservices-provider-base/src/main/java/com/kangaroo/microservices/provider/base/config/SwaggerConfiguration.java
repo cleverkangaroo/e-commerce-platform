@@ -30,7 +30,7 @@ public class SwaggerConfiguration {
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
 				.apis(RequestHandlerSelectors.basePackage(CONTROLLER_PACKAGE)).paths(PathSelectors.any()).build()
-				.apiInfo(apiInfo()).globalOperationParameters(globalOperationParameters());
+				.apiInfo(apiInfo());
 	}
 
 	private List<Parameter> globalOperationParameters() {

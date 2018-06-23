@@ -26,6 +26,6 @@ public class UsersController {
 	    @RequestMapping(value = "/getUserInfo", method = RequestMethod.GET)
 	    public ApiResult getUserInfo(@ApiParam(value="用户ID",required=true) @RequestParam(value = "userId") Long userId)  {
 	        UsersVO userInfo = usersService.getUserInfo(userId);
-	    	return new ApiResult(1, "成功", userInfo);
+	    	return ApiResult.ok(userInfo);
 	    }
 }

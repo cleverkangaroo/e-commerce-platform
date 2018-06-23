@@ -37,8 +37,9 @@
 		<kangaroo.core.version>0.0.1-SNAPSHOT</kangaroo.core.version>
 		<kangaroo.utils.version>0.0.1-SNAPSHOT</kangaroo.utils.version>
 		<kangaroo.microservices.api.core.version>0.0.1-SNAPSHOT</kangaroo.microservices.api.core.version>
+		<kangaroo.api.core.version>0.0.1-SNAPSHOT</kangaroo.api.core.version>
 		<kangaroo.microservices.provider.core.version>0.0.1-SNAPSHOT</kangaroo.microservices.provider.core.version>
-		
+		<kangaroo.microservices.api.base.version>0.0.1-SNAPSHOT</kangaroo.microservices.api.base.version>
 
 	</properties>
 	<dependencyManagement>
@@ -229,6 +230,18 @@
 				<groupId>com.kangaroo</groupId>
 				<artifactId>kangaroo-microservices-provider-core</artifactId>
 				<version>${kangaroo.microservices.provider.core.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.kangaroo</groupId>
+				<artifactId>kangaroo-microservices-api-base</artifactId>
+				<version>${kangaroo.microservices.api.base.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.kangaroo</groupId>
+				<artifactId>kangaroo-api-core</artifactId>
+				<version>${kangaroo.api.core.version}</version>
 			</dependency>
 
 		</dependencies>

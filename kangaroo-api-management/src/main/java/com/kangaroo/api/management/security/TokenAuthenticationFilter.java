@@ -42,7 +42,6 @@ public class TokenAuthenticationFilter extends GenericFilterBean {
 
 	private void verifyToken(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws IOException {
 		String token = getToken(httpRequest);
-		// 没token则继续执行过滤器
 		if (StringUtils.isEmpty(token)) {
 			return;
 		}

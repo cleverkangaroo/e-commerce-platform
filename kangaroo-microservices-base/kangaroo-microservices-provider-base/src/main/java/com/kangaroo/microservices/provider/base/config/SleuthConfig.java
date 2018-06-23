@@ -4,7 +4,7 @@ import org.springframework.cloud.sleuth.sampler.AlwaysSampler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class SleuthConfig {
 	@Bean
 	public AlwaysSampler defaultSampler() {

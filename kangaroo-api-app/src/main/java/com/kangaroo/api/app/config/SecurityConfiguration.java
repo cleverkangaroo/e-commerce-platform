@@ -87,13 +87,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests().antMatchers(managementContext + "/**").permitAll();
 		http.authorizeRequests().antMatchers("/swagger-ui.html", "/v2/api-docs").permitAll();
 
-		http.authorizeRequests().withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
-			public <O extends FilterSecurityInterceptor> O postProcess(O fsi) {
-				fsi.setAccessDecisionManager(customAccessDecisionManager);
-				return fsi;
-			}
-		}).anyRequest().authenticated();
-
 		http.exceptionHandling().authenticationEntryPoint(authenticationEntryPoint);
 
 		http.formLogin().permitAll().loginProcessingUrl(LOGIN_PATH).successHandler(authSuccessHandler)

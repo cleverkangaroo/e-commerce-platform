@@ -19,7 +19,7 @@ import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import com.kangaroo.microservices.provider.base.support.DefaultHandlerInterceptor;
 import com.kangaroo.microservices.provider.core.swagger.SwaggerJsonSerializer;
-import com.kangaroo.utils.spring.EnvUtil;
+import com.kangaroo.utils.spring.EnvironmentUtil;
 
 import springfox.documentation.spring.web.json.Json;
 
@@ -68,7 +68,7 @@ public class WebMvcConfiguration extends WebMvcConfigurerAdapter {
 	}
 	
 	@Bean
-	public EnvUtil envUtil() {
-		return new EnvUtil();
+	public EnvironmentUtil environmentUtil() {
+		return new EnvironmentUtil();
 	}
 }

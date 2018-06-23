@@ -3,9 +3,13 @@ package com.kangaroo.utils.spring;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.core.env.Environment;
 
-public class EnvUtil implements EnvironmentAware {
+public class EnvironmentUtil implements EnvironmentAware {
 
 	public static Environment env;
+	
+	public static boolean containsProperty(String key){
+		return env.containsProperty(key);
+	}
 
 	public static String getProperty(String key) {
 		return env.getProperty(key);
@@ -26,5 +30,6 @@ public class EnvUtil implements EnvironmentAware {
 	@Override
 	public void setEnvironment(Environment environment) {
 		env = environment;
+		
 	}
 }

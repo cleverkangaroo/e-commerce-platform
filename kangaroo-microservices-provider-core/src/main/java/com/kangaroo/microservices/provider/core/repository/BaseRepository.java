@@ -2,7 +2,8 @@ package com.kangaroo.microservices.provider.core.repository;
 
 import java.util.List;
 
-public interface IBaseRepository<T> {
+public interface BaseRepository<T> {
+	
 	public T selectByPrimaryKey(Object key);
 
 	public int updateByPrimaryKeySelective(T record);
@@ -23,6 +24,5 @@ public interface IBaseRepository<T> {
 
 	public List<T> select(T record);
 
-	public List<T> select(T record, String[] sorts);
 
 }

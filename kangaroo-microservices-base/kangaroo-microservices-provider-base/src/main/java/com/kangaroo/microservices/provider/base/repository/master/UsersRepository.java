@@ -5,4 +5,5 @@ import com.kangaroo.microservices.provider.core.repository.BaseRepository;
 
 public interface UsersRepository extends BaseRepository<Users>{
 
+	public Users selectByUsernameAndDtype(String username,String dtype);
 }

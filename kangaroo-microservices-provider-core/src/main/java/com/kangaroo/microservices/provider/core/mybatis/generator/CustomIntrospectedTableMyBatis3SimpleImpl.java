@@ -2,6 +2,7 @@ package com.kangaroo.microservices.provider.core.mybatis.generator;
 
 import java.util.List;
 
+import org.mybatis.generator.api.GeneratedJavaFile;
 import org.mybatis.generator.api.ProgressCallback;
 import org.mybatis.generator.codegen.AbstractJavaClientGenerator;
 import org.mybatis.generator.codegen.AbstractJavaGenerator;
@@ -66,4 +67,34 @@ public class CustomIntrospectedTableMyBatis3SimpleImpl extends IntrospectedTable
 	                progressCallback);
 	        javaModelGenerators.add(javaGenerator);
 	    }
+
+
+		@Override
+		protected String calculateJavaClientImplementationPackage() {
+			// TODO Auto-generated method stub
+			return super.calculateJavaClientImplementationPackage();
+		}
+
+
+		@Override
+		protected String calculateJavaClientInterfacePackage() {
+			// TODO Auto-generated method stub
+			return super.calculateJavaClientInterfacePackage();
+		}
+
+
+		@Override
+		protected void calculateJavaClientAttributes() {
+			// TODO Auto-generated method stub
+			super.calculateJavaClientAttributes();
+		}
+
+
+		@Override
+		public List<GeneratedJavaFile> getGeneratedJavaFiles() {
+			// TODO Auto-generated method stub
+			return super.getGeneratedJavaFiles();
+		}
+	    
+	    
 }
