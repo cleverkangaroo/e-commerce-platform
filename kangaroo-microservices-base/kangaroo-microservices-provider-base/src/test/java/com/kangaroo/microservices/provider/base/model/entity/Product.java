@@ -233,6 +233,8 @@ public class Product {
     @Column(name = "tag_id")
     private Long tagId;
 
+    private Integer deleted;
+
     private String introduction;
 
     @Column(name = "productImages")
@@ -1270,6 +1272,20 @@ public class Product {
      */
     public void setTagId(Long tagId) {
         this.tagId = tagId;
+    }
+
+    /**
+     * @return deleted
+     */
+    public Integer getDeleted() {
+        return deleted;
+    }
+
+    /**
+     * @param deleted
+     */
+    public void setDeleted(Integer deleted) {
+        this.deleted = deleted;
     }
 
     /**

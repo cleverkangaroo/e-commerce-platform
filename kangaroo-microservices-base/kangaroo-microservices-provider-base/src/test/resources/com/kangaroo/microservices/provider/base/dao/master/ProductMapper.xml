@@ -76,6 +76,7 @@
     <result column="isProtected" jdbcType="BIT" property="isprotected" />
     <result column="tag" jdbcType="VARCHAR" property="tag" />
     <result column="tag_id" jdbcType="BIGINT" property="tagId" />
+    <result column="deleted" jdbcType="INTEGER" property="deleted" />
     <result column="introduction" jdbcType="LONGVARCHAR" property="introduction" />
     <result column="productImages" jdbcType="LONGVARCHAR" property="productimages" />
   </resultMap>
@@ -93,6 +94,6 @@
     sn, specificationItems, totalScore, type, unit, weekHits, weekHitsDate, weekSales, 
     weekSalesDate, weight, brand_id, productCategory_id, store_id, storeProductCategory_id, 
     groupPrice, groupNumber, groupSales, groupRules, sort, lock_status, thumbnail, is_deleted, 
-    isProtected, tag, tag_id
+    isProtected, tag, tag_id, deleted
   </sql>
 </mapper>
