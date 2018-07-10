@@ -24,6 +24,7 @@ public class UsersRepositoryImpl extends BaseRepositoryImpl<Users> implements Us
 	@Override
 	public Users selectByUsernameAndDtype(String username, String dtype) {
 		return usersMapper.selectByUsernameAndDtype(username, dtype);
+		
 	}
 
 	

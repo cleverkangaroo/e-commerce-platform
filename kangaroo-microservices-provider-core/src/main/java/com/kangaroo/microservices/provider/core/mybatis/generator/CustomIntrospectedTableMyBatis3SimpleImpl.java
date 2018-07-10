@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.mybatis.generator.api.GeneratedJavaFile;
+import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.api.ProgressCallback;
 import org.mybatis.generator.codegen.AbstractJavaClientGenerator;
 import org.mybatis.generator.codegen.AbstractJavaGenerator;
@@ -301,5 +302,6 @@ public class CustomIntrospectedTableMyBatis3SimpleImpl extends IntrospectedTable
            }
        } 
        return repositorys;
+       
    }
 }

@@ -4,14 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import org.apache.commons.lang3.StringUtils;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.internal.DefaultShellCallback;
 
 import com.kangaroo.microservices.provider.core.mybatis.generator.CustomConfigurationParser;
-
-import tk.mybatis.mapper.generator.MapperPlugin;
 
 public class GeneratorMasterCodeMain {
 	public static void generator() {
