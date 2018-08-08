@@ -25,10 +25,10 @@ public class MultiTransactionalAspect implements ApplicationContextAware {
 
 	@Around("@annotation(multiTransactional)")
 	public Object around(ProceedingJoinPoint pjp, MultiTransactional multiTransactional) throws Throwable {
-		Stack<MultiTransactionInfo> transactionInfos = new Stack();
+		Stack<MultiTransactionInfo> transactionInfos = new Stack<MultiTransactionInfo>();
 
 		// push transactionInfos to current thread
-		MultiTransactionAspectSupport.setCurrentTransationInfos(transactionInfos);
+		//MultiTransactionAspectSupport.setCurrentTransationInfos(transactionInfos);
 
 		try {
 			if (!openTransaction(transactionInfos, multiTransactional)) {
@@ -80,19 +80,19 @@ public class MultiTransactionalAspect implements ApplicationContextAware {
 
 	class MultiTransactionInfo {
 
-		private String dataSourceManagerName;
+		private String dataSourceTransactionManagerName;
 		private DataSourceTransactionManager dataSourceTransactionManager;
 		private TransactionStatus status;
 
-		public MultiTransactionInfo(String dataSourceManagerName,
+		public MultiTransactionInfo(String dataSourceTransactionManagerName,
 				DataSourceTransactionManager dataSourceTransactionManager) {
-			this.dataSourceManagerName = dataSourceManagerName;
+			this.dataSourceTransactionManagerName = dataSourceTransactionManagerName;
 			this.dataSourceTransactionManager = dataSourceTransactionManager;
 			this.status = this.dataSourceTransactionManager.getTransaction(new DefaultTransactionDefinition());
 		}
 
-		public String getDataSourceManagerName() {
-			return this.dataSourceManagerName;
+		public String getDataSourceTransactionManagerName() {
+			return this.dataSourceTransactionManagerName;
 		}
 
 		public void commit() {
@@ -106,7 +106,8 @@ public class MultiTransactionalAspect implements ApplicationContextAware {
 		public void setRollbackOnly() {
 			this.status.setRollbackOnly();
 		}
-
+		
+		
 	}
 
 }

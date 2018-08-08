@@ -15,7 +15,7 @@ public class MasterSqlSessionHelper extends AbstractSqlSessionHelper {
 
 	@Autowired
 	public MasterSqlSessionHelper(@Qualifier("masterSqlSessionTemplate") SqlSessionTemplate sqlSessionTemplate,
-			@Qualifier(TransactionConstant.MASTER) DataSourceTransactionManager dataSourceTransactionManager) {
+			@Qualifier(MultiTransactionConstant.MASTER) DataSourceTransactionManager dataSourceTransactionManager) {
 		this.sqlSessionTemplate = sqlSessionTemplate;
 		this.dataSourceTransactionManager = dataSourceTransactionManager;
 	}

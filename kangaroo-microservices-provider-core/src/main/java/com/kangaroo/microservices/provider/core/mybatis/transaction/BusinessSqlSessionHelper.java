@@ -15,7 +15,7 @@ public class BusinessSqlSessionHelper extends AbstractSqlSessionHelper {
 
 	@Autowired
 	public BusinessSqlSessionHelper(@Qualifier("businessSqlSessionTemplate") SqlSessionTemplate sqlSessionTemplate,
-			@Qualifier(TransactionConstant.BUSINESS) DataSourceTransactionManager dataSourceTransactionManager) {
+			@Qualifier(MultiTransactionConstant.BUSINESS) DataSourceTransactionManager dataSourceTransactionManager) {
 		this.sqlSessionTemplate = sqlSessionTemplate;
 		this.dataSourceTransactionManager = dataSourceTransactionManager;
 	}

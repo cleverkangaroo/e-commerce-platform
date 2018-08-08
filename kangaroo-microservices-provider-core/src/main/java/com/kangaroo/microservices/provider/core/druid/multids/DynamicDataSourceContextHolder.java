@@ -1,8 +1,13 @@
 package com.kangaroo.microservices.provider.core.druid.multids;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DynamicDataSourceContextHolder {
 
     private static final ThreadLocal<String> contextHolder = new ThreadLocal<String>();
+    
+    public static List<String> dataSourceIds = new ArrayList<String>();
     
     private DynamicDataSourceContextHolder() {}
 
@@ -16,6 +21,10 @@ public class DynamicDataSourceContextHolder {
 
     public static void clearDataSourceType() {
         contextHolder.remove();
+    }
+    
+    public static boolean containsDataSource(String dataSourceId){
+        return dataSourceIds.contains(dataSourceId);
     }
 
 }

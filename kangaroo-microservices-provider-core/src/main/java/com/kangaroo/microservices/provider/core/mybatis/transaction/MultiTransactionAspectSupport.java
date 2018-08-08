@@ -10,7 +10,7 @@ public class MultiTransactionAspectSupport {
 
 	private static final ThreadLocal<Stack<MultiTransactionInfo>> transactionInfos = new ThreadLocal<>();
 
-	protected static void setCurrentTransationInfos(Stack<MultiTransactionInfo> multiTransactionInfos) {
+	/*protected static void setCurrentTransationInfos(Stack<MultiTransactionInfo> multiTransactionInfos) {
 		transactionInfos.set(multiTransactionInfos);
 	}
 
@@ -26,10 +26,11 @@ public class MultiTransactionAspectSupport {
 		Stack<MultiTransactionalAspect.MultiTransactionInfo> multiTransactionInfos = currentTransactionInfos();
 		multiTransactionInfos.stream().filter(info -> {
 			return StringUtils.isBlank(transactionManagerName)
-					|| transactionManagerName.equals(info.getDataSourceManagerName());
+					|| transactionManagerName.equals(info.getDataSourceTransactionManagerName());
 		}).forEach(info -> {
 			info.setRollbackOnly();
 		});
+		
 	}
-
+*/
 }

@@ -9,6 +9,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface MultiTransactional {
 
-	public String[] values() default { TransactionConstant.MASTER, TransactionConstant.BUSINESS };
+	public String[] values() default { MultiTransactionConstant.MASTER, MultiTransactionConstant.BUSINESS };
 
 }

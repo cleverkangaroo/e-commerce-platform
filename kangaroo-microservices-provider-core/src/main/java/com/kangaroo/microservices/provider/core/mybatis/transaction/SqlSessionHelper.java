@@ -12,7 +12,7 @@ import com.kangaroo.microservices.provider.core.mybatis.transaction.AbstractSqlS
 
 
 @Component
-public class SqlSessionHelper {
+public class SqlSessionHelper{
 
 	private static MasterSqlSessionHelper masterSqlSessionHelper;
 	private static BusinessSqlSessionHelper businessSqlSessionHelper;
