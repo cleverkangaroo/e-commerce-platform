@@ -10,11 +10,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@EnableConfigurationProperties({ DataSourcePool.MasterDataSource.class })
+@EnableConfigurationProperties({ DataSourcePool.DataSourceProperties.class })
 public class DruidConfiguration {
 
-	@Bean(name = "masterDataSource", initMethod = "init", destroyMethod = "close")
-	public DataSource mainDataSource(@Autowired DataSourcePool.MasterDataSource mainDataSource) throws SQLException {
-		return DataSourcePool.create(mainDataSource);
+	@Bean(name = "dataSource", initMethod = "init", destroyMethod = "close")
+	public DataSource dataSource(@Autowired DataSourcePool.DataSourceProperties dataSourceProperties) throws SQLException {
+		return DataSourcePool.create(dataSourceProperties);
 	}
 }

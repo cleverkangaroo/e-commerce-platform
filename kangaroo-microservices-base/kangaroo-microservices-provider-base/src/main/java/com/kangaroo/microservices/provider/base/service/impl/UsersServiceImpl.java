@@ -2,6 +2,7 @@ package com.kangaroo.microservices.provider.base.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.kangaroo.microservices.provider.base.model.entity.Users;
 import com.kangaroo.microservices.provider.base.repository.master.UsersRepository;

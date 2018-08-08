@@ -12,7 +12,7 @@ import com.kangaroo.microservices.provider.core.druid.support.DecryptDruidDataSo
 public class DataSourcePool {
 	
 	@ConfigurationProperties(prefix = "spring.master")
-	static class MasterDataSource extends BaseDataSourceProperties {}
+	static class DataSourceProperties extends BaseDataSourceProperties {}
 	
 	
 	/**
