@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.kangaroo.microservices.provider.base.model.entity.Users;
-import com.kangaroo.microservices.provider.base.repository.master.UsersRepository;
+import com.kangaroo.microservices.provider.base.repository.UsersRepository;
 import com.kangaroo.microservices.provider.base.service.UsersService;
 
 @Service

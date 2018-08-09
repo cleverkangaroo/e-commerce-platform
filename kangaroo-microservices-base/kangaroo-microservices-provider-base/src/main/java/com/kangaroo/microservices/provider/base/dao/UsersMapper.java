@@ -1,4 +1,4 @@
-package com.kangaroo.microservices.provider.base.dao.master;
+package com.kangaroo.microservices.provider.base.dao;
 
 import org.apache.ibatis.annotations.Param;
 

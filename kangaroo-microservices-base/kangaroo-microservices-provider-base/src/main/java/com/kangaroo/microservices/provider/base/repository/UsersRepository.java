@@ -1,4 +1,4 @@
-package com.kangaroo.microservices.provider.base.repository.master;
+package com.kangaroo.microservices.provider.base.repository;
 
 import com.kangaroo.microservices.provider.base.model.entity.Users;
 import com.kangaroo.microservices.provider.core.repository.BaseRepository;

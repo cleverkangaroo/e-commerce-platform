@@ -21,7 +21,7 @@ public class MyBatisMapperScannerConfig {
 	public MapperScannerConfigurer mapperScannerConfigurer() {
 		MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
 		mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
-		mapperScannerConfigurer.setBasePackage("com.kangaroo.microservices.provider.*.dao.business");
+		mapperScannerConfigurer.setBasePackage("com.kangaroo.microservices.provider.*.dao");
 		Properties properties = new Properties();
 		properties.setProperty("mappers",
 				"tk.mybatis.mapper.common.Mapper,tk.mybatis.mapper.common.MySqlMapper,tk.mybatis.mapper.common.IdsMapper,com.kangaroo.microservices.provider.core.mybatis.mapper.CustomMapper");

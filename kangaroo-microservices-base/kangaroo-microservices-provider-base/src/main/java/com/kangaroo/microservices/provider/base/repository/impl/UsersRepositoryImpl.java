@@ -1,11 +1,11 @@
-package com.kangaroo.microservices.provider.base.repository.master.impl;
+package com.kangaroo.microservices.provider.base.repository.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.kangaroo.microservices.provider.base.dao.master.UsersMapper;
+import com.kangaroo.microservices.provider.base.dao.UsersMapper;
 import com.kangaroo.microservices.provider.base.model.entity.Users;
-import com.kangaroo.microservices.provider.base.repository.master.UsersRepository;
+import com.kangaroo.microservices.provider.base.repository.UsersRepository;
 import com.kangaroo.microservices.provider.core.repository.impl.BaseRepositoryImpl;
 
 import tk.mybatis.mapper.common.Mapper;
