@@ -11,9 +11,9 @@ import com.kangaroo.microservices.provider.core.mybatis.transaction.Scan;
 
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
-@Configuration
-@Import(MultiDataMyBatisConfiguration.class)
-@ComponentScan(basePackageClasses = Scan.class)
+//@Configuration
+//@Import(MultiDataMyBatisConfiguration.class)
+//@ComponentScan(basePackageClasses = Scan.class)
 public class MultiDataMyBatisMapperScannerConfig {
 
 	@Bean

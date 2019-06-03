@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class MultiTransactionalAspect implements ApplicationContextAware {
 
 	private ApplicationContext applicationContext;

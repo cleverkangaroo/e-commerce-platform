@@ -11,7 +11,7 @@ import org.springframework.transaction.support.DefaultTransactionDefinition;
 import com.kangaroo.microservices.provider.core.mybatis.transaction.AbstractSqlSessionHelper.DaoHelper;
 
 
-@Component
+//@Component
 public class SqlSessionHelper{
 
 	private static MasterSqlSessionHelper masterSqlSessionHelper;

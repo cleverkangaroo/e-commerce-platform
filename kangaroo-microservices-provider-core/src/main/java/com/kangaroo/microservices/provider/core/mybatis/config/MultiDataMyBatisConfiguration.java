@@ -23,8 +23,8 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 import com.github.pagehelper.PageInterceptor;
 import com.kangaroo.microservices.provider.core.mybatis.transaction.MultiTransactionConstant;
 
-@Configuration
-@EnableTransactionManagement
+//@Configuration
+//@EnableTransactionManagement
 public class MultiDataMyBatisConfiguration implements TransactionManagementConfigurer {
 
 	@Autowired

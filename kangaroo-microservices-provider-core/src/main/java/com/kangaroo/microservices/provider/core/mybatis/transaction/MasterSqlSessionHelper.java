@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.stereotype.Component;
 
-@Component("masterSqlSessionHelper")
+//@Component("masterSqlSessionHelper")
 public class MasterSqlSessionHelper extends AbstractSqlSessionHelper {
 
 	private final SqlSessionTemplate sqlSessionTemplate;
