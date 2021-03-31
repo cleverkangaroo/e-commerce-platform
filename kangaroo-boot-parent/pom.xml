@@ -31,7 +31,7 @@
 		<log4j.version>2.7</log4j.version>
 		<commons.httpclient.version>3.0.1</commons.httpclient.version>
 		<logstash.logback.version>4.11</logstash.logback.version>
-		<guava.version>25.1-jre</guava.version>
+		<guava.version>29.0-jre</guava.version>
 		<easypoi.version>2.4.0</easypoi.version>
 		
 		<kangaroo.core.version>0.0.1-SNAPSHOT</kangaroo.core.version>
