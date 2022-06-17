@@ -15,7 +15,7 @@
 		<spring.cloud.version>Dalston.SR3</spring.cloud.version>
 		<swagger.version>1.5.9</swagger.version>
 		<commons-lang3.version>3.5</commons-lang3.version>
-		<fastjson.version>1.2.29</fastjson.version>
+		<fastjson.version>1.2.83</fastjson.version>
 		<springfox-swagger2.version>2.5.0</springfox-swagger2.version>
 		<mapper.version>3.4.2</mapper.version>
 		<mybatis.version>3.4.4</mybatis.version>
